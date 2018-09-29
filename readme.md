@@ -12,4 +12,13 @@ rules.rule - password wordlist (Credit to NSAKEY) -><br>
 (https://github.com/NSAKEY/nsa-rules)<br>
 README.md - this page
 
-# Comments
+# Prerequesties
+python kamene module<br>
+(sudo pip3 install kamene)
+
+##Windows:
+ipv6 installed<br>
+
+##linux
+
+
