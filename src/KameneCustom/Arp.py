@@ -17,9 +17,6 @@ def start_arp_poison(globalVars):
     globalVars.set_posion_thread()
     globalVars.poison_thread.start()
 
-    globalVars.set_lab_thread()
-    globalVars.lab_thread.start()    
-
 
 def start_arp_poison_thread(globalVars, gatewayArp: ArpObj, victimArp: ArpObj):
     while (globalVars.arpPosion == True):

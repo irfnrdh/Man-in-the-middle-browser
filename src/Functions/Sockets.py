@@ -3,14 +3,13 @@ This file contains the socket functions this program use
 '''
 
 import socket
+import threading
 
-from KameneCustom.Arp import ArpObj
-
-def start_socket_thread(globalVars, gatewayArp: ArpObj, victimArp: ArpObj):
+def start_socket_thread():
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
     try:
-        s.bind(('', 80))
+        s.bind(('', 9090))
     except socket.error as e:
         print(str(e))
 
@@ -19,3 +18,12 @@ def start_socket_thread(globalVars, gatewayArp: ArpObj, victimArp: ArpObj):
     conn, addr = s.accept()
 
     print('Connected with ' + addr[0] + ':' + str(addr[1]))
+
+def demo_send():
+    s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+    s.connect(('127.0.0.1', 9090))
+    s.send(str('hello').encode())
+if __name__ == '__main__':
+       thread = threading.Thread(target=start_socket_thread)
+       thread.start()
+       demo_send()

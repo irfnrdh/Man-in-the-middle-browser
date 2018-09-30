@@ -3,9 +3,11 @@ This file contains the classes this program use
 """
 import threading
 
-from KameneCustom.Arp import ArpObj, start_arp_poison_thread, start_sniff_thread, start_socket_thread, start_lab_thread
+from KameneCustom.Arp import ArpObj, start_arp_poison_thread
 from KameneCustom.Interfaces import get_my_default_iface
+from KameneCustom.Sniff import start_lab_thread, start_sniff_thread
 from Functions.Services import PreRoutingService, IPForwardingService
+from Functions.Sockets import start_socket_thread
 
 class GlobalVars:
     def __init__(self):
