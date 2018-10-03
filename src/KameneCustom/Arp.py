@@ -4,7 +4,8 @@ This file contains the kamene ARP classes and functions this program use
 
 import time
 
-from kamene.sendrecv import send
+from kamene.all import send
+#from kamene.sendrecv import send
 from kamene.layers.l2 import ARP
 
 class ArpObj:
