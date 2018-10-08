@@ -7,7 +7,7 @@ import threading
 import select
 import queue
 
-from kamene.all import sr1
+#from kamene.all import sr1
 from kamene.layers.l2 import Ether
 from kamene.layers.dns import IP, Raw
 
